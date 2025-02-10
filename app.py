@@ -1,36 +1,30 @@
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import confusion_matrix
-from sklearn import preprocessing
-import pickle
+import streamlit as st
 import numpy as np
+import pickle
+from sklearn.linear_model import LogisticRegression
 
-# Load the data
-data = pd.read_csv('sonar.all.data', header=None, delimiter=" ")
-X = data.iloc[:, 0:60]
-y = data.iloc[:, 60]
+# Load the trained model
+with open('logistic_model.pkl', 'rb') as file:
+    data = pickle.load(file)
+    model = data['model']
 
-# Label encoding
-le = preprocessing.LabelEncoder()
-y = le.fit_transform(y)
+# Streamlit app layout
+st.title("Mine vs Rock Prediction")
+st.write("Enter the Mean SONAR Reading to predict if it's a Mine or a Rock.")
 
-# Split the data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Input field for the mean sonar reading
+mean_reading = st.number_input("Mean Sonar Reading", min_value=0.0, max_value=1.0, format="%.4f")
 
-# Train the model
-model = LogisticRegression(max_iter=1000)
-model.fit(X_train, y_train)
+# When the user clicks the predict button
+if st.button("Predict"):
+    # Create a numpy array with 60 identical features based on the mean reading
+    input_data_as_numpy_array = np.array([mean_reading] * 60).reshape(1, -1)
+    
+    # Make prediction
+    prediction = model.predict(input_data_as_numpy_array)
 
-# Evaluate the model
-predictions = model.predict(X_test)
-accuracy = accuracy_score(y_test, predictions)
-print(f"Model Accuracy: {accuracy:.3f}")
-
-# Create a dictionary with the model and training data
-data_dict = {'model': model, 'X_train': X_train, 'y_train': y_train}
-
-# Save the dictionary to a pickle file
-with open('logistic_model.pkl', 'wb') as file:
-    pickle.dump(data_dict, file)
+    # Display the prediction
+    if prediction[0] == 1:
+        st.success('The object is a Rock')
+    else:
+        st.success('The object is a Mine')
