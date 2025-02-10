@@ -13,9 +13,7 @@
 9. [Code Organization](#code-organization)
 10. [Prerequisites](#prerequisites)
 11. [Running the Code](#running-the-code)
-12. [Contact Information](#contact-information)
-13. [License](#license)
-14. [Acknowledgments](#acknowledgments)
+12. [License](#license)
 
 ## Overview
 
@@ -155,22 +153,19 @@ The confusion matrix for the Logistic Regression model is:
 1. **Accuracy**: The model achieves an accuracy of approximately 76.19%, suggesting a reasonable level of classification performance.
 
 2. **Precision**: The precision for the positive class (mines) is calculated as:
-   \[
-   \text{Precision} = \frac{TP}{TP + FP} = \frac{9}{9+2} \approx 0.818 \text{ (or 81.8\%)}
-   \]
+
+   Precision = {TP} / {TP + FP} = {9} / {9+2} which is approx 0.818 (or 81.8%)
    This indicates that among all instances predicted as mines, 81.8% were actually mines.
 
 3. **Recall**: The recall for the positive class (mines) is calculated as:
-   \[
-   \text{Recall} = \frac{TP}{TP + FN} = \frac{9}{9+3} = 0.75 \text{ (or 75\%)}
-   \]
+   
+   Recall = {TP} / {TP + FN} = {9} / {9+3} which is approx 0.75 (or 75%)
    This means that the model correctly identifies 75% of actual mines.
 
 4. **F1 Score**: The F1 score can be computed as:
-   \[
-   F1 = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}} = 2 \cdot \frac{0.818 \cdot 0.75}{0.818 + 0.75} \approx 0.782
-   \]
-   This simplifies to $F1 \approx 0.782$ (or 78.2%).
+   
+   F1 Score = {2 * {Precision} * {Recall}} / {{Precision} + {Recall}} = {2 * 0.818 * 0.75} / {0.818 + 0.75} which is approx 0.782
+   This simplifies to F1 Score to approx 0.782 (or 78.2%).
 
 5. **Class Imbalance Consideration**: The model misclassified 2 rocks as mines (false positives), suggesting a possible tendency to overpredict mines, which may need to be addressed.
 
@@ -196,22 +191,19 @@ The confusion matrix for the Support Vector Classifier is:
 1. **Accuracy**: The SVC achieves an accuracy of approximately 80.95%, indicating better performance compared to the Logistic Regression model.
 
 2. **Precision**: The precision for the positive class (mines) is calculated as:
-   \[
-   \text{Precision} = \frac{TP}{TP + FP} = \frac{10}{10+1} \approx 0.909 \text{ (or 90.9\%)}
-   \]
+   
+   Precision = {TP} / {TP + FP} = {10} / {10+1} which is approx 0.909 (or 90.9%)
    This shows that 90.9% of the instances predicted as mines were indeed mines.
 
 3. **Recall**: The recall for the positive class (mines) is:
-   \[
-   \text{Recall} = \frac{TP}{TP + FN} = \frac{10}{10+3} \approx 0.769 \text{ (or 76.9\%)}
-   \]
+   
+   Recall = {TP} / {TP + FN} = {10} / {10+3} which is approx 0.769 (or 76.9%)
    This indicates that the model accurately identifies 76.9% of actual mines.
 
 4. **F1 Score**: The F1 score can be computed as:
-   \[
-   F1 = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}} = 2 \cdot \frac{0.909 \cdot 0.769}{0.909 + 0.769} \approx 0.833
-   \]
-   This simplifies to $F1 \approx 0.833$ (or 83.3%).
+   
+   F1 Score = {2 * {Precision} * {Recall}} / {{Precision} + {Recall}} = {2 * 0.909 * 0.769} / {0.909 + 0.769} which is approx 0.833
+   This simplifies to F1 Score to approx 0.833 (or 83.3%).
 
 5. **Class Imbalance Consideration**: The SVC has only one false positive, which suggests that it has a very good precision and is quite limited in misclassifying rocks as mines.
 
