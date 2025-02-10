@@ -251,5 +251,7 @@ This app allows users to input SONAR data and receive real-time predictions rega
 ### How to Use the Streamlit App:
 
 Input Form: Enter the values for SONAR returns in the provided input fields.
+
 Prediction: Click on the "Predict" button to receive the prediction on whether the input corresponds to a rock or a mine.
+
 Results Display: The application will display the results clearly on the screen.
