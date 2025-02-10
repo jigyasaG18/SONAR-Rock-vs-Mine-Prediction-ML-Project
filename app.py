@@ -16,7 +16,7 @@ mean_reading = st.number_input("Mean Sonar Reading", min_value=0.0, max_value=1.
 # When the user clicks the predict button
 if st.button("Predict"):
     # Create a numpy array with 60 identical features based on the mean reading
-    input_data_as_numpy_array = np.array([mean_reading] * 60).reshape(1, -1)
+    input_data_as_numpy_array = np.array([mean_reading] / 60).reshape(1, -1)
 
     # Make prediction
     prediction = model.predict(input_data_as_numpy_array)
