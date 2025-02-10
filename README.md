@@ -13,7 +13,7 @@
 9. [Code Organization](#code-organization)
 10. [Prerequisites](#prerequisites)
 11. [Running the Code](#running-the-code)
-12. [License](#license)
+12. [Streamlit Deployment](#streamlit-deployment)
 
 ## Overview
 
@@ -244,7 +244,7 @@ To execute the project:
 
 The project has been deployed as a web application using Streamlit. You can access the interactive application through the following link:
 
-#SONAR Rock vs Mine Prediction Streamlit App[https://sonar-rock-vs-mine-prediction-ml-app.streamlit.app/]
+[SONAR Rock vs Mine Prediction Streamlit App](https://sonar-rock-vs-mine-prediction-ml-app.streamlit.app/)
 
 This app allows users to input SONAR data and receive real-time predictions regarding whether the object is a rock or a mine. 
 
@@ -252,7 +252,3 @@ How to Use the Streamlit App:
 Input Form: Enter the values for SONAR returns in the provided input fields.
 Prediction: Click on the "Predict" button to receive the prediction on whether the input corresponds to a rock or a mine.
 Results Display: The application will display the results clearly on the screen.
-
-## License
-
-This project is licensed under the MIT License.
