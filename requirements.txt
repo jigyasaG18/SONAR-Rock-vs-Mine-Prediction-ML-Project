@@ -1,3 +1,0 @@
-streamlit
-numpy
-scikit-learn
