@@ -5,7 +5,7 @@ from sklearn.linear_model import LogisticRegression
 
 # Load the trained model
 with open('logistic_model.pkl', 'rb') as file:
-    data = pickle.load(file)
+    model = pickle.load(file)
 
 # Streamlit app layout
 st.title("Mine vs Rock Prediction")
