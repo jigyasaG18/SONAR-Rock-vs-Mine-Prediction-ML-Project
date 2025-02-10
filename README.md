@@ -240,6 +240,19 @@ To execute the project:
 2. Open the Jupyter Notebook containing the code snippets provided in this README.
 3. Run the cells sequentially to train the models and evaluate their performances.
 
+## Streamlit Deployment
+
+The project has been deployed as a web application using Streamlit. You can access the interactive application through the following link:
+
+#SONAR Rock vs Mine Prediction Streamlit App[https://sonar-rock-vs-mine-prediction-ml-app.streamlit.app/]
+
+This app allows users to input SONAR data and receive real-time predictions regarding whether the object is a rock or a mine. 
+
+How to Use the Streamlit App:
+Input Form: Enter the values for SONAR returns in the provided input fields.
+Prediction: Click on the "Predict" button to receive the prediction on whether the input corresponds to a rock or a mine.
+Results Display: The application will display the results clearly on the screen.
+
 ## License
 
 This project is licensed under the MIT License.
