@@ -244,7 +244,7 @@ To execute the project:
 
 The project has been deployed as a web application using Streamlit. You can access the interactive application through the following link:
 
-### [SONAR Rock vs Mine Prediction Streamlit App](https://sonar-rock-vs-mine-prediction-ml-app.streamlit.app/)
+### [SONAR Rock vs Mine Prediction Streamlit App](https://sonar-rock-vs-mine-prediction-ml-project-app.streamlit.app/)
 
 This app allows users to input SONAR data and receive real-time predictions regarding whether the object is a rock or a mine. 
 
